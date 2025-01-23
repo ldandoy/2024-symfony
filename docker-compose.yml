@@ -3,9 +3,9 @@ services:
     image: overconsulting/apachephp
     container_name: apachephp
     ports: 
-      - 8001:8001
+      - 8001:80
     volumes:
-      - ./app:/app
+      - ./app:/var/www
       - ./config/vhosts:/etc/apache2/sites-enabled
       - ./config/custom.ini:/usr/local/etc/php/conf.d/custom.ini
     networks:
