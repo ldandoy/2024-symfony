@@ -1,6 +1,6 @@
 services:
   web:
-    image: overconsulting/apachephp
+    build: config
     container_name: apachephp
     ports: 
       - 8001:80
