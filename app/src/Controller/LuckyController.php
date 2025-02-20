@@ -1,22 +1,3 @@
-# symfony
-
-## Installation
-
-Créez le fichier docker-compose.yml
-
-```bash
-$ docker-compose up -d --build
-$ docker-compose exec web symfony new . --version="7.2.x" --webapp --no-interaction
-```
-## Création du controller
-
-```bash
-$ touch src/Controller/LuckyController.php
-```
-
-*src/Controller/LuckyController.php*
-
-```php
 <?php
 // src/Controller/LuckyController.php
 namespace App\Controller;
@@ -40,10 +21,3 @@ class LuckyController extends AbstractController
         ]);
     }
 }
-```
-
-## Créer la base de donnée
-
-```
-
-```
