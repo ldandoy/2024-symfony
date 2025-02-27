@@ -44,6 +44,41 @@ class LuckyController extends AbstractController
 
 ## Créer la base de donnée
 
+```bash
+
 ```
 
+## Modification de Music pour ajouter l'auteur
+
+```bash
+docker-compose exec web php bin/console make:entity Music
+docker-compose exec web php bin/console make:migration
+docker-compose exec web php bin/console d:m:m
+```
+
+### Installation de FakerPHP
+
+```bash
+ docker-compose exec web composer require fakerphp/faker
+```
+
+### Modification des fixtures
+
+```php
+
+```
+
+### Executer les fixtures
+
+```bash
+docker-compose exec web php bin/console d:f:l --append
+```
+
+## Eaasy Bundle Admin
+
+```bash
+docker-compose exec web composer require easycorp/easyadmin-bundle
+docker-compose exec web php bin/console make:admin:dashboard
+docker-compose exec web php bin/console cache:clear
+docker-compose exec web php bin/console make:admin:crud
 ```
